@@ -1,0 +1,117 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.quality {
+    background-color: $container-color;
+
+    .quality__content {
+        row-gap: 2.5rem;
+
+        @include mixins.breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        @include mixins.breakpoint-up(xlarge) {
+            column-gap: 6rem;
+        }
+
+        .quality__images {
+            position: relative;
+            justify-self: center;
+
+            @include mixins.breakpoint-up(xlarge){
+                margin-top: 2rem;
+            }
+
+            .quality__img-big,
+            .quality__img-small {
+                border-radius: .5rem;
+                filter: drop-shadow(0 12px 8px rgba(0,0,0, .2));
+            }
+
+            .quality__img-big {
+                width: 17.5rem;
+                @include mixins.breakpoint-up(xlarge) {
+                    width: 26.75rem;
+                }
+            }
+
+            .quality__img-small {
+                width: 6.25rem;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                transform: translate(1.5rem, 4rem);
+                border: 1px solid $text-color-light;
+
+                @include mixins.breakpoint-up(xlarge) {
+                    width: 9.56rem;
+                    transform: translate(2rem, 6rem);
+                }
+            }
+        }
+    }
+
+    .quality__data {
+
+        .quality__title,
+        .quality__price {
+            text-transform: capitalize;
+        }
+
+        .quality__title {
+            margin-bottom: .75rem;
+
+            @include mixins.breakpoint-up(xlarge) {
+                margin-bottom: 1.5rem;
+            } 
+        }
+
+        .quality__price {
+            margin-bottom: .25rem;
+        }
+
+        .quality__special {
+            display: block;
+            text-transform: capitalize;
+            line-height: 140%;
+            margin-bottom: .75rem;
+
+            @include mixins.breakpoint-up(xlarge) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .quality__description {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .quality__buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        @include mixins.breakpoint-down(small){
+            flex-direction: column;           
+            row-gap: 1rem;
+        }
+
+        .quality__button {
+            font-size: $normal-font-size;
+            text-transform: uppercase;
+            color: $title-color;
+            display: inline-flex;
+            align-items: center;
+            column-gap: .25rem;
+
+            &:hover img {
+                transform: translateX(.5rem);
+                transition: .4s;
+            }
+        }
+    }
+}

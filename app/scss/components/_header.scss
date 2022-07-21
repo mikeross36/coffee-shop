@@ -1,0 +1,155 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.header {
+    width: 100%;
+    // background-color: black;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-fixed;
+
+    // changing headers background on scroll
+    &.scroll-header {
+        background-color: $body-color;
+        box-shadow: 0 1px 4px #2825251a;
+
+        .nav__logo {
+            color: #243B55;
+        }
+
+        .nav__toggle .toggle1 {
+            display: none;
+        }
+
+        .nav__toggle .toggle2 {
+            display: block;
+        }
+
+        .nav__link {
+            color: $first-color;
+        }
+
+        .active-link {
+            color: $first-color;
+        }
+    }
+
+    .nav {
+        height: $header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+            color: $container-color;
+            font-weight: $font-bold;
+            text-transform: capitalize;
+
+            @include mixins.breakpoint-up(large) {
+                font-size: 1.5rem
+            }
+        }
+
+        &__toggle {
+            display: inline-flex;
+            cursor: pointer;
+        }
+
+        &__toggle,
+        &__close {
+            @include mixins.breakpoint-up(medium){
+                display: none;
+            }
+        }
+
+        &__toggle {
+            .toggle2 {
+                display: none;
+            }
+        }
+        
+        &__menu {
+            // during devolpment right value is 0
+            @include mixins.breakpoint-down(medium) {
+                position: fixed;
+                // background-color: $black-color;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100%;
+                transition: .5s;
+                background: #141E30;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            &.show-menu {
+                right: 0;
+            }
+
+            .nav__list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4rem;
+                text-align: center;
+                padding-top: 9rem;
+
+                @include mixins.breakpoint-up(medium) {
+                    padding-top: 0;
+                    flex-direction: row;
+                    column-gap: 4rem;
+                }
+
+                .nav__item {
+
+                    .nav__link {
+                        text-transform: uppercase;
+                        color: $text-color-light;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        transition: .3s;
+        
+                        @include mixins.breakpoint-up(medium) {
+                            position: relative;
+                            font-size: 1.2rem;
+        
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 1px;
+                                height: 1rem;
+                                background-color: $text-color;
+                                transform: translateX(1.25rem);
+                                top: 0;
+                                bottom: 0;
+                                margin: 0 auto;
+                            }
+                        } 
+
+                        &:active {
+                            color: $first-color;
+                        }
+    
+                        &.active-link {
+                            color: $first-color;
+                        }
+                    }
+                }
+            }
+
+            .nav__close {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+

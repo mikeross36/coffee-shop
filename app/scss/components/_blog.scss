@@ -1,0 +1,97 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.blog {
+    background-color: $container-color;
+}
+
+.blog__container {
+    padding-bottom: 2rem;
+
+    @include mixins.breakpoint-up(xlarge){
+        padding-bottom: 5rem;
+    }
+
+    .blog__content {
+        row-gap: 3rem;
+
+        @include mixins.breakpoint-up(small){
+            grid-template-columns: 1fr;
+            column-gap: 3rem;
+        }
+
+        @include mixins.breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixins.breakpoint-up(large){
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 2rem;
+        }
+
+        .blog__card {
+            max-width: 22rem;
+            max-height: 30rem;
+            overflow: hidden;
+            
+            .blog__image {
+                position: relative;
+                margin-bottom: 1.5rem;
+
+                .blog__img {
+                    
+                    border-radius: .5rem;
+                    filter: drop-shadow(0 12px 8px rgba(0,0,0, .2));
+                }
+
+                .blog__button {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: inline-flex;
+                    background-color: #243B55;
+                    padding: 1rem;
+                    border-radius: .5rem 0 .5rem 0;
+
+                    & img {
+                        transform: rotate(-30deg);
+                        transition: .4s;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: rotate(-30deg) translate(.25rem);
+                        }
+                    }
+                }
+            }
+
+            .blog__data {
+
+                .blog__title {
+                    text-transform: capitalize;
+                    margin-bottom: 1.5rem;
+                }
+
+                .blog__description {
+                    margin-bottom: 1.5rem;
+                    line-height: 140%;
+                }
+
+                .blog__footer,
+                .blog__reaction {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .blog__footer {
+                    column-gap: 1.5rem;
+                }
+
+                .blog__reaction {
+                    column-gap: .25rem;
+                }
+            }
+        }
+    }
+}

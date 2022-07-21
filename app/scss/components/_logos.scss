@@ -1,0 +1,35 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.logos {
+    background-color: $container-color;
+
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        align-items: center;
+        justify-items: center;
+        gap: 2.5rem;
+        border-top: 1px solid $text-color-light;
+        padding-top: 2.5rem;
+
+        & img:last-child {
+            justify-self: center;
+        }
+
+        .logo__img {
+            width: 7rem;
+            mix-blend-mode: luminosity;
+            opacity: .4;
+            transition: .4s;
+
+            @include mixins.breakpoint-up(xlarge) {
+                width: 6.875rem;
+            }
+
+            &:hover {
+                opacity: .8;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

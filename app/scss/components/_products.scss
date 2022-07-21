@@ -1,0 +1,161 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.products__filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+    margin-bottom: 3.5rem;
+
+    @include mixins.breakpoint-up(medium){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mixins.breakpoint-up(xlarge) {
+        margin: 4rem 0 5.5rem;
+    }
+
+    .products__item {
+        cursor: pointer;
+
+        &.active-link {
+            .products__title {
+                color: $first-color;
+                font-weight: 700;
+                text-decoration: underline;
+                text-decoration-color: $first-color;
+            }
+        }
+
+        .products__title {
+            color: $text-color;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .products__line {
+        @include mixins.breakpoint-up(large){
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 40px;
+                background-color: $text-color-light;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
+        }
+    }
+}
+
+.products__content {
+    display: none;
+    grid-template-columns: 12.5rem;
+    justify-content: center;
+
+    @include mixins.breakpoint-up(small){
+        padding-bottom: 3rem;
+    }
+
+    &.active-content {
+        display: block;
+    }
+
+    .products__wrapper {
+        display: grid;
+        grid-template-columns: 12.5rem;
+        justify-content: center;
+        row-gap: 2rem;
+        animation: content .3s linear .5s backwards;
+
+        @include mixins.breakpoint-up(medium){
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: initial;
+            align-items: center;
+            column-gap: 3rem;
+        }
+
+        .products__card {
+            background-color: $container-color;
+            border-radius: .5rem;
+            box-shadow: $shadowOne;
+
+            &:hover {
+                .products__img {
+                    transform: translate(.25rem, -.25rem);
+                }
+            }
+
+            @include mixins.breakpoint-up(xlarge) {
+                border-radius: .75rem;
+            }
+
+            .products__shape {
+                background-color: $card-color;
+                border-radius: .5rem .5rem 0 0;
+                text-align: center;
+                padding: .25rem 0;
+
+                @include mixins.breakpoint-up(xlarge) {
+                    padding: 2rem 0;
+                    border-radius: .75rem;
+                }
+
+                .products__img {
+                    max-width: 9rem;
+                    max-height: 7rem;
+                    transition: .3s;
+                    filter: drop-shadow(0 12px 8px rgba(0,0,0, .2));
+
+                    @include mixins.breakpoint-up(xlarge) {
+                        width: 12.5rem;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            .products__data {
+                padding: 1rem 0 1.25rem 1rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                @include mixins.breakpoint-up(xlarge) {
+                    padding: 1rem 0 1.5rem 1.5rem;
+                }
+
+                .products__price, 
+                .products__name {
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    line-height: 150%;
+
+                    @include mixins.breakpoint-up(medium){
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .products__button {
+                    border-radius: .5rem;
+                    padding: .625rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: -1.4rem;
+                    box-shadow: 0 4px 12px hsla(206, 4%, 14%, .2);
+                }
+            }
+        }
+    }
+
+    @keyframes content {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+    }
+}

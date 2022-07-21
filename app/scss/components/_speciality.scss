@@ -1,0 +1,85 @@
+@use "../mixins";
+@use "../variables" as *;
+
+.speciality__container {
+
+    .speciality__box {
+      
+        @include mixins.breakpoint-up(large) {
+            display: grid;
+            grid-template-columns: 2fr .5fr;
+            align-items: baseline;
+        }
+    }
+
+    .speciality__category {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 12.5rem;
+        justify-content: center;
+        row-gap: 2.5rem;
+
+        @include mixins.breakpoint-up(small){
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+        }
+
+        @include mixins.breakpoint-up(large) {
+            grid-template-columns: repeat(3, 15.625rem);
+            column-gap: 8rem;
+            align-items: center;
+        }
+
+        .speciality__group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            @include mixins.breakpoint-up(large) {
+                align-items: flex-start;
+                text-align: initial;
+            }
+
+            &:hover {
+                .speciality__img {
+                    transform: translateY(-.25rem);
+                }
+            }
+
+            .speciality__img {
+                width: 3.75rem;
+                margin-bottom: 1rem;
+                transition: .4s;
+
+                @include mixins.breakpoint-up(large) {
+                    width: 4rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .speciality__title {
+                text-transform: capitalize;
+                margin-bottom: .25rem;
+            }
+        }
+
+        .speciality__line {
+            @include mixins.breakpoint-up(large) {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 1px;
+                    height: 120px;
+                    background-color: $text-color-light;
+                    position: absolute;
+                    right: -5rem;
+                    top: 0;
+                    bottom: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

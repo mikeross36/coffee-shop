@@ -1,0 +1,37 @@
+$header-height: 3.5rem;
+
+/*========== Colors ==========*/
+$first-color: #faa422;
+$first-color-alt: hsl(36, 72%, 44%);
+$black-color: hsl(206, 12%, 12%);
+$card-color: hsl(0, 0%, 90%);
+$title-color: hsl(206, 12%, 12%);
+$text-color: #818c97;
+$text-color-light: #dee0e0;
+$body-color: hsl(206, 4%, 97%);
+$container-color: #fff;
+
+/*========== Font and typography ==========*/
+$body-font: 'Lato', sans-serif;
+$biggest-font-size: 2.25rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+/*========== Font weight ==========*/
+$font-bold: 700;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;
+
+$shadowOne: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+$shadowTwo: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$shadowText: .1rem.1rem .1rem #333333;
+
+@media screen and (min-width: 968px) {
+    $biggest-font-size: 3.5rem;
+    $normal-font-size: 1rem;
+    $small-font-size: .875rem;
+    $smaller-font-size: .813rem;
+}

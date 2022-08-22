@@ -1,8 +1,8 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .quality {
-    background-color: $container-color;
+    background-color: $white-color;
 
     .quality__content {
         row-gap: 2.5rem;
@@ -87,6 +87,12 @@
 
         .quality__description {
             margin-bottom: 2.5rem;
+            line-height: 160%;
+            width: fit-content;
+
+            @include mixins.breakpoint-up(large) {
+                line-height: 180%;
+            }
         }
     }
 
@@ -101,9 +107,9 @@
         }
 
         .quality__button {
-            font-size: $normal-font-size;
+            font-size: $fontMd;
             text-transform: uppercase;
-            color: $title-color;
+            color: $text-color;
             display: inline-flex;
             align-items: center;
             column-gap: .25rem;

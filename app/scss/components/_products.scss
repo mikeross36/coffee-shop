@@ -1,15 +1,11 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .products__filters {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     margin-bottom: 3.5rem;
-
-    @include mixins.breakpoint-up(medium){
-        grid-template-columns: repeat(3, 1fr);
-    }
 
     @include mixins.breakpoint-up(xlarge) {
         margin: 4rem 0 5.5rem;
@@ -24,6 +20,7 @@
                 font-weight: 700;
                 text-decoration: underline;
                 text-decoration-color: $first-color;
+                background: $white-color;
             }
         }
 
@@ -34,16 +31,17 @@
     }
 
     .products__line {
-        @include mixins.breakpoint-up(large){
+
+        @include mixins.breakpoint-up(medium) {
             position: relative;
 
             &::after {
                 content: "";
                 position: absolute;
-                width: 1px;
-                height: 40px;
+                width: 2px;
+                height: 3rem;
                 background-color: $text-color-light;
-                right: 0;
+                left: 10rem;
                 top: 0;
                 bottom: 0;
                 margin: auto 0;
@@ -70,7 +68,7 @@
         grid-template-columns: 12.5rem;
         justify-content: center;
         row-gap: 2rem;
-        animation: content .3s linear .5s backwards;
+        animation: content .2s linear .2s backwards;
 
         @include mixins.breakpoint-up(medium){
             grid-template-columns: repeat(3, 1fr);
@@ -80,13 +78,15 @@
         }
 
         .products__card {
-            background-color: $container-color;
+            background-color: $white-color;
             border-radius: .5rem;
             box-shadow: $shadowOne;
 
-            &:hover {
-                .products__img {
-                    transform: translate(.25rem, -.25rem);
+            @include mixins.breakpoint-up(medium) {
+                &:hover {
+                    .products__img {
+                        transform: translate(.25rem, -.25rem);
+                    }
                 }
             }
 
@@ -119,7 +119,7 @@
             }
 
             .products__data {
-                padding: 1rem 0 1.25rem 1rem;
+                padding: 1rem 0 1rem 1rem;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -146,7 +146,7 @@
                     position: absolute;
                     right: 1rem;
                     top: -1.4rem;
-                    box-shadow: 0 4px 12px hsla(206, 4%, 14%, .2);
+                    box-shadow: 0 4px 12px #22242533;
                 }
             }
         }

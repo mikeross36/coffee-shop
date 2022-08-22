@@ -1,52 +1,29 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .header {
     width: 100%;
-    // background-color: black;
     background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
     z-index: $z-fixed;
 
-    // changing headers background on scroll
-    &.scroll-header {
-        background-color: $body-color;
-        box-shadow: 0 1px 4px #2825251a;
-
-        .nav__logo {
-            color: #243B55;
-        }
-
-        .nav__toggle .toggle1 {
-            display: none;
-        }
-
-        .nav__toggle .toggle2 {
-            display: block;
-        }
-
-        .nav__link {
-            color: $first-color;
-        }
-
-        .active-link {
-            color: $first-color;
-        }
-    }
-
     .nav {
-        height: $header-height;
+        height: calc($header-height + .5rem);
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        &__logo {
+        @include mixins.breakpoint-up(medium){
+            height: calc($header-height + 1rem);
+        }
+
+        .nav__logo {
             display: flex;
             align-items: center;
             column-gap: .5rem;
-            color: $container-color;
+            color: $white-color;
             font-weight: $font-bold;
             text-transform: capitalize;
 
@@ -55,29 +32,28 @@
             }
         }
 
-        &__toggle {
+        .menu__btn {
             display: inline-flex;
             cursor: pointer;
         }
 
-        &__toggle,
+        .menu__btn,
         &__close {
             @include mixins.breakpoint-up(medium){
                 display: none;
             }
         }
 
-        &__toggle {
-            .toggle2 {
+        .menu__btn {
+            .menu__icon-black {
                 display: none;
             }
         }
         
-        &__menu {
-            // during devolpment right value is 0
+        .nav__menu {
+            
             @include mixins.breakpoint-down(medium) {
                 position: fixed;
-                // background-color: $black-color;
                 top: 0;
                 right: -100%;
                 width: 100%;
@@ -110,32 +86,22 @@
                     .nav__link {
                         text-transform: uppercase;
                         color: $text-color-light;
-                        font-size: 1rem;
+                        font-size: $fontSlg;
                         font-weight: 700;
-                        transition: .3s;
+                        letter-spacing: 2px;
+                        z-index: 10;
         
                         @include mixins.breakpoint-up(medium) {
                             position: relative;
                             font-size: 1.2rem;
-        
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                width: 1px;
-                                height: 1rem;
-                                background-color: $text-color;
-                                transform: translateX(1.25rem);
-                                top: 0;
-                                bottom: 0;
-                                margin: 0 auto;
-                            }
+                            letter-spacing: normal;
                         } 
 
                         &:active {
                             color: $first-color;
                         }
     
-                        &.active-link {
+                        .active-link {
                             color: $first-color;
                         }
                     }
@@ -150,6 +116,32 @@
             }
         }
     }
-    
+}
+
+.header.scroll-header {
+    background-color: $body-color;
+    box-shadow: 0 1px 4px #2825251a;
+
+    .nav__logo {
+        color: $btn-color;
+    }
+
+    .menu__btn .menu__icon {
+        display: none;
+    }
+
+    .menu__btn .menu__icon-black {
+        display: block;
+    }
+
+    .nav__menu .nav__list .nav__item .nav__link .active-link {
+        color: $first-color;
+    }
+
+    @include mixins.breakpoint-up(medium){
+        .nav__menu .nav__list .nav__item .nav__link {
+            color: $btn-color !important;
+        }
+    }
 }
 

@@ -1,5 +1,5 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .footer {
     padding: 4rem 0 2.5rem;
@@ -8,7 +8,7 @@
     background: linear-gradient(to left, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     .footer__title {
-        color: $container-color;
+        color: $white-color;
         margin-bottom: 2rem;
         text-transform: capitalize;
     }
@@ -24,7 +24,7 @@
         }
 
         @include mixins.breakpoint-up(xlarge){
-            grid-template-columns: repeat(4, max-content);
+            grid-template-columns: repeat(4, 1fr);
             column-gap: 4rem;
         }
 
@@ -71,7 +71,7 @@
             }
 
             .footer__subtitle {
-                color: $container-color;
+                color: $white-color;
                 text-transform: capitalize;
                 margin-bottom: .75rem;
             }
@@ -112,7 +112,7 @@
             }
 
             &-link {
-                color: $container-color;
+                color: $white-color;
 
                 @include mixins.breakpoint-up(xlarge) {
                     font-size: 1.5rem;
@@ -126,6 +126,6 @@
         }
     }
     .footer__copy {
-        font-size: $smaller-font-size;
+        font-size: $fontSm;
     }
 }

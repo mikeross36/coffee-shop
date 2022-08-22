@@ -1,31 +1,20 @@
-openMobMenu()
-
 function openMobMenu() {
     const navMenu = document.getElementById("nav-menu")
-    const navToggle = document.getElementById("nav-toggle")
+    const menuBtn = document.getElementById("menu-btn")
     const navClose = document.getElementById("nav-close")
     const navLinks = document.querySelectorAll(".nav__link")
 
-    if (navToggle) {
-        navToggle.addEventListener("click", () => {
-            navMenu.classList.add("show-menu")
-        })
-    }
+    if (menuBtn) menuBtn.addEventListener("click", () => navMenu.classList.add("show-menu"))
 
-    if (navClose) {
-        navClose.addEventListener("click", () => {
-            navMenu.classList.remove("show-menu")
-        })
-    }
-
+    if (navClose) navClose.addEventListener("click", () => navMenu.classList.remove("show-menu"))
+    
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             navMenu.classList.remove("show-menu")
         })
     })
-}
+};
 
-// changing headers backgrouns on scroll
 function scrollHeader() {
     const header = document.getElementById("header")
 
@@ -35,9 +24,7 @@ function scrollHeader() {
     else {
         header.classList.remove("scroll-header")
     }
-}
-window.addEventListener("scroll", scrollHeader)
-
+};
 
 // products tabs changing
 const productsLinks = document.querySelectorAll(".products__item")
@@ -60,25 +47,33 @@ function changeProducts(e) {
 
 productsLinks.forEach(link => {
     link.addEventListener("click", changeProducts)
-})
+});
 
-const slides = [...document.querySelectorAll(".slide__container")]
-const prevBtn = document.querySelector(".prev__slide")
-const nextBtn = document.querySelector(".next__slide")
-let index = 0;
+function setupSlides() {
+    const slides = [...document.querySelectorAll(".slide__container")]
+    const prevBtn = document.querySelector(".prev__slide")
+    const nextBtn = document.querySelector(".next__slide")
+    let index = 0
 
-const nextSlide = () => {
-    slides[index].classList.remove("active-slide")
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active-slide")
-}
+    const nextSlide = () => {
+        slides[index].classList.remove("active-slide")
+        index = (index + 1) % slides.length
+        slides[index].classList.add("active-slide")
+    }
 
-const prevSlide = () => {
-    slides[index].classList.remove("active-slide")
-    index = (index - 1 + slides.length) % slides.length;
-    slides[index].classList.add("active-slide")
-}
+    const prevSlide = () => {
+        slides[index].classList.remove("active-slide")
+        index = (index - 1 + slides.length) % slides.length
+        slides[index].classList.add("active-slide")
+    }
 
-prevBtn.addEventListener("click", prevSlide)
-nextBtn.addEventListener("click", nextSlide)
+    prevBtn.addEventListener("click", prevSlide)
+    nextBtn.addEventListener("click", nextSlide)
+};
+
+(function () {
+    openMobMenu()
+    window.addEventListener("scroll", scrollHeader);
+    setupSlides()
+})()
 

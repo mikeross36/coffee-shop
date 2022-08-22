@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-    <link rel="shortcut icon" href="/app/images/favicon.png" type="image/x-icon">
     <title>Coffee Website</title>
-    <link rel="stylesheet" href="/dist/css/main.css">
-    <script src="/dist/js/all.js" defer></script>
+    <link rel="stylesheet" href="./dist/css/main.css?cache_bust=123">
+    <script src="./dist/js/all.js?cache_bust=123" defer></script>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <img src="/app/images/logo.svg" alt="" class="nav__logo-img" width="40px" height="40px">
+            <a href="#banner" class="nav__logo">
+                <img src="app/images/logo.svg" alt="nav logo" class="nav__logo-img" width="40px" height="40px"/>
                 <span>coffeebar</span>
             </a>
             <div class="nav__menu" id="nav-menu">
@@ -36,514 +35,510 @@
                     <img src="/app/images/close-btn.svg" alt="close btn" width="35px" height="35px">
                 </div>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <img src="/app/images/menu-btn.svg" class="toggle1" alt="menu btn" width="30px" height="30px">
-                <img src="/app/images/menu-btn-black.svg" class="toggle2" alt="menu btn" width="30px" height="30px">
+            <div class="menu__btn" id="menu-btn">
+                <img src="/app/images/menu-btn.svg" class="menu__icon" alt="menu btn" width="30px" height="30px">
+                <img src="/app/images/menu-btn-black.svg" class="menu__icon-black" alt="menu btn" width="30px" height="30px">
             </div>
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="main">
-        <!-- BANNER -->
-        <section class="banner grid" id="banner">
-            <div class="banner__container">
-                <div class="banner__content container">
-                    <h1 class="banner__title">Choos your coffee & anjoy</h1>
-                    <p class="banner__description">
-                        Your favorite coffee delivered on your schedule
-                    </p>
-                    <div class="banner__data">
-                        <div class="banner__data-group">
-                            <h3 class="banner__data-number">we have..</h3>
-                            <p class="banner__data-title">experience</p>
-                            <p class="banner__data-description">
-                                inclusive Italian café experience, serving everything from your morning
-                            </p>
-                        </div>
-                        <div class="banner__data-group">
-                            <h3 class="banner__data-number">we have..</h3>
-                            <p class="banner__data-title">relationships</p>
-                            <p class="banner__data-description">
-                                More than just a great cup of coffee We have a brew for every time of day
-                            </p>
-                        </div>
+    <!-- BANNER -->
+    <section class="banner grid" id="banner">
+        <div class="banner__container">
+            <div class="banner__content container">
+                <h1 class="banner__title">Choos your coffee</h1>
+                <p class="banner__description">
+                    Your favorite coffee delivered on your schedule
+                </p>
+                <div class="banner__data">
+                    <div class="banner__data-group">
+                        <h4 class="banner__data-number">we have..</h4>
+                        <p class="banner__data-title">experience</p>
+                        <p class="banner__data-description">
+                            inclusive Italian café experience, serving everything from your morning
+                        </p>
                     </div>
-                    <!-- floating logo -->
-                    <a href="#speciality">
-                        <img src="/app/images/coffee-cup.svg" alt="floating logo" class="banner__scroll">
-                    </a>
+                    <div class="banner__data-group">
+                        <h4 class="banner__data-number">we have..</h4>
+                        <p class="banner__data-title">relationships</p>
+                        <p class="banner__data-description">
+                            More than just a great cup of coffee We have a brew for every time of day
+                        </p>
+                    </div>
+                </div>
+                <a href="#speciality">
+                    <img src="/app/images/coffee-cup.svg" alt="floating logo" class="banner__scroll">
+                </a>
+            </div>
+        </div>
+        <img src="/app/images/home-pic.jpg" alt="banner pic" class="banner__img">
+    </section>
+
+    <!-- SPECIALITY COFFEE -->
+    <section class="speciality section container" id="speciality">
+        <div class="speciality__container">
+            <div class="speciality__box">
+                <h2 class="section__title">
+                    Never run out of coffee again!
+                </h2>
+                <div>
+                    <a href="#banner" class="button speciality__button">learn more</a>
                 </div>
             </div>
-            <img src="/app/images/home-pic.jpg" alt="banner pic" class="banner__img">
-        </section>
+            <!--  -->
+            <div class="speciality__category">
+                <div class="speciality__group speciality__line">
+                    <img src="/app/images/speciality1.svg" alt="" class="speciality__img" width="20px" height="20px">
+                    <h3 class="speciality__title">selected coffee</h3>
+                    <p class="speciality__description">
+                        We select the best premium coffee for a true taste
+                    </p>
+                </div>
+                <!--  -->
+                <div class="speciality__group speciality__line">
+                    <img src="/app/images/speciality2.svg" alt="" class="speciality__img" width="20px" height="20px">
+                    <h3 class="speciality__title">own barista</h3>
+                    <p class="speciality__description">
+                        Act all fancy like you know something
+                    </p>
+                </div>
+                <!--  -->
+                <div class="speciality__group">
+                    <img src="/app/images/speciality3.svg" alt="" class="speciality__img" width="20px" height="20px">
+                    <h3 class="speciality__title">enjoy at home</h3>
+                    <p class="speciality__description">
+                        Enjoy the best coffee in the comfort of your home
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- SPECIALITY COFFEE -->
-        <section class="speciality section container" id="speciality">
-            <div class="speciality__container">
-                <div class="speciality__box">
-                    <h2 class="section__title">
-                        Never run out of coffee again!
-                    </h2>
-                    <div>
-                        <a href="" class="button speciality__button">learn more</a>
+    <!-- PRODUCTS -->
+    <section class="products section" id="products">
+        <div class="products__container container">
+            <h2 class="section__title">Choose our delicious & best products</h2>
+            <ul class="products__filters">
+                <li class="products__item products__line active-link" data-product="delicacies">
+                    <h4 class="products__title">lattes</h4>
+                    <span class="products__stock">3 products</span>
+                </li>
+                <li class="products__item products__line" data-product="coffee">
+                    <h4 class="products__title">mochas</h4>
+                    <span class="products__stock">4 products</span>
+                </li>
+                <li class="products__item products__line" data-product="cake">
+                    <h4 class="products__title">amped</h4>
+                    <span class="products__stock">4 products</span>
+                </li>
+            </ul>
+            <!-- delicacies -->
+            <div class="products__content grid active-content" id="delicacies">
+                <div class="products__wrapper">
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee1.png" alt="delicacy product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">irish dream</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee2.png" alt="delicacy product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">aloha</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee3.png" alt="delicacy product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">avalanche</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- coffee -->
+            <div class="products__content grid" id="coffee">
+                <div class="products__wrapper">
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee4.png" alt="coffee product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">muscle mocha</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee5.png" alt="coffee product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">trifecta</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee6.png" alt="coffee product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">cloud 9</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee7.png" alt="coffee product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">dream bar</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- cake -->
+            <div class="products__content grid" id="cake">
+                <div class="products__wrapper">
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee8.png" alt="cake product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">white russian</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee9.png" alt="cake product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">campfire</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee10.png" alt="cake product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">charger</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                    <!--  -->
+                    <article class="products__card">
+                        <div class="products__shape">
+                            <img src="/app/images/coffee11.png" alt="cake product" class="products__img">
+                        </div>
+                        <div class="products__data">
+                            <span class="products__price">4.99€</span>
+                            <span class="products__name">coco loco</span>
+                            <button class="button products__button">
+                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUALITY -->
+    <section class="quality section" id="premium">
+        <div class="quality_container container">
+            <h2 class="section__title">
+                We offer premium & better quality just for you
+            </h2>
+            <div class="quality__content grid">
+                <div class="quality__images">
+                    <img src="/app/images/quality1.jpg" alt="quality pic big" class="quality__img-big">
+                    <img src="/app/images/quality2.jpg" alt="quality pic small" class="quality__img-small">
+                </div>
+                <div class="quality__data">
+                    <h3 class="quality__title">premium coffee</h3>
+                    <h4 class="qulity__price">34.99€</h4>
+                    <span class="quality__special">special price</span>
+                    <p class="quality__description">
+                        We are delighted with our coffee. That's why you get the best 
+                        premium coffee plus the kettle made of resistant materials that 
+                        you see in the image, for a special price.
+                    </p>
+                    <div class="quality__buttons">
+                        <button class="button">buy now</button>
+                        <a href="" class="quality__button">
+                            see more <img src="/app/images/arrow-right.svg" alt="arrow right" width="20px" height="20px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- LOGOS -->
+    <section class="logos section">
+        <div class="logos__container container grid">
+            <img src="/app/images/logocoffee1.png" alt="logos" class="logo__img">
+            <img src="/app/images/logocoffee2.png" alt="logos" class="logo__img">
+            <img src="/app/images/logocoffee3.png" alt="logos" class="logo__img">
+            <img src="/app/images/logocoffee4.png" alt="logos" class="logo__img">
+            <img src="/app/images/logocoffee5.png" alt="logos" class="logo__img">
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section">
+        <div class="testimonials__container container">
+            <h2 class="section__title">Testimonials</h2>
+            <div class="testimonials__content grid">
+                <div class="slide__container active-slide">
+                    <div class="slide">
+                        <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="30px" height="30px">
+                        <div class="user">
+                            <img src="/app/images/person1.jpg" alt="" class="user__img">
+                            <div class="user__info">
+                                <h3>jane doe</h3>
+                                <div class="user__stars">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="user__description">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Incidunt, reprehenderit maiores! Asperiores, 
+                            quaerat."
+                        </p>
                     </div>
                 </div>
                 <!--  -->
-                <div class="speciality__category">
-                    <div class="speciality__group speciality__line">
-                        <img src="/app/images/specialty1.svg" alt="" class="speciality__img">
-                        <h3 class="speciality__title">selected coffee</h3>
-                        <p class="speciality__description">
-                            We select the best premium coffee for a true taste
+                <div class="slide__container">
+                    <div class="slide">
+                        <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="30px" height="30px">
+                        <div class="user">
+                            <img src="/app/images/person2.jpg" alt="" class="user__img">
+                            <div class="user__info">
+                                <h3>john doe</h3>
+                                <div class="user__stars">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="user__description">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Incidunt, reprehenderit maiores! Asperiores, 
+                            quaerat."
                         </p>
                     </div>
-                    <!--  -->
-                    <div class="speciality__group speciality__line">
-                        <img src="/app/images/speciality2.svg" alt="" class="speciality__img" width="20px" height="20px">
-                        <h3 class="speciality__title">own barista</h3>
-                        <p class="speciality__description">
-                            Act all fancy like you know something
+                </div>
+                <!--  -->
+                <div class="slide__container">
+                    <div class="slide">
+                        <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="30px" height="30px">
+                        <div class="user">
+                            <img src="/app/images/person3.jpg" alt="" class="user__img">
+                            <div class="user__info">
+                                <h3>jane doe</h3>
+                                <div class="user__stars">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="user__description">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Incidunt, reprehenderit maiores! Asperiores, 
+                            quaerat."
                         </p>
                     </div>
-                    <!--  -->
-                    <div class="speciality__group">
-                        <img src="/app/images/speciality3.svg" alt="" class="speciality__img" width="20px" height="20px">
-                        <h3 class="speciality__title">enjoy at home</h3>
-                        <p class="speciality__description">
-                            Enjoy the best coffee in the comfort of your home
+                </div>
+                <!--  -->
+                <div class="slide__container">
+                    <div class="slide">
+                        <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="30px" height="30px">
+                        <div class="user">
+                            <img src="/app/images/person4.jpg" alt="" class="user__img">
+                            <div class="user__info">
+                                <h3>jane doe</h3>
+                                <div class="user__stars">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                    <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="user__description">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Incidunt, reprehenderit maiores! Asperiores, 
+                            quaerat."
                         </p>
                     </div>
                 </div>
+                
             </div>
-        </section>
+        </div>
+        <button class="prev__slide">
+            <img src="/app/images/left-arrow.svg" alt="" width="40px" height="40px">
+        </button>
+        <button class="next__slide">
+            <img src="/app/images/right-arrow.svg" alt="" width="40px" height="40px">
+        </button>
+    </section>
 
-        <!-- PRODUCTS -->
-        <section class="products section" id="products">
-            <div class="products__container container">
-                <h2 class="section__title">Choose our delicious & best products</h2>
-                <ul class="products__filters">
-                    <li class="products__item products__line active-link" data-product="delicacies">
-                        <h3 class="products__title">Lattes</h3>
-                        <span class="products__stock">3 products</span>
-                    </li>
-                    <li class="products__item products__line" data-product="coffee">
-                        <h3 class="products__title">Mochas</h3>
-                        <span class="products__stock">4 products</span>
-                    </li>
-                    <li class="products__item products__line" data-product="cake">
-                        <h3 class="products__title">Amped</h3>
-                        <span class="products__stock">4 products</span>
-                    </li>
-                </ul>
-                <!-- delicacies -->
-                <div class="products__content grid active-content" id="delicacies">
-                    <div class="products__wrapper">
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee1.png" alt="delicacy product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">IRISH DREAM</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee2.png" alt="delicacy product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">ALOHA</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee3.png" alt="delicacy product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">AVALANCHE</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                                </button>
-                            </div>
-                        </article>
+    <!-- BLOG -->
+    <section class="section blog section" id="blog">
+        <div class="blog__container container">
+            <h2 class="section__title">
+                Welcome to our coffee blog!
+            </h2>
+            <div class="blog__content grid">
+                <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="/app/images/blog1.jpg" alt="" class="blog__img">
+                        <a href="#" class="blog__button">
+                            <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
+                        </a>
                     </div>
-                </div>
-                <!-- coffee -->
-                <div class="products__content grid" id="coffee">
-                    <div class="products__wrapper">
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee4.png" alt="coffee product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">MUSCLE MOCHA</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee5.png" alt="coffee product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">TRIFECTA</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee6.png" alt="coffee product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">CLOUD 9:</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee7.png" alt="coffee product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">DREAM BAR</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- cake -->
-                <div class="products__content grid" id="cake">
-                    <div class="products__wrapper">
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee8.png" alt="cake product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">WHITE RUSSIAN</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee9.png" alt="cake product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">CAMPFIRE</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee10.png" alt="cake product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">CHARGER</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                        <!--  -->
-                        <article class="products__card">
-                            <div class="products__shape">
-                                <img src="/app/images/coffee11.png" alt="cake product" class="products__img">
-                            </div>
-                            <div class="products__data">
-                                <span class="products__price">5€</span>
-                                <span class="products__name">COCO LOCO</span>
-                                <button class="button products__button">
-                                    <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- QUALITY -->
-        <section class="quality section" id="premium">
-            <div class="quality_container container">
-                <h2 class="section__title">
-                    We offer premium & better quality just for you
-                </h2>
-                <div class="quality__content grid">
-                    <div class="quality__images">
-                        <img src="/app/images/quality1.jpg" alt="quality pic big" class="quality__img-big">
-                        <img src="/app/images/quality2.jpg" alt="quality pic small" class="quality__img-small">
-                    </div>
-                    <div class="quality__data">
-                        <h3 class="quality__title">premium coffee</h3>
-                        <h3 class="qulity__price">34.99€</h3>
-                        <span class="quality__special">special price</span>
-                        <p class="quality__description">
-                            We are delighted with our coffee. That's why you get the best 
-                            premium coffee plus the kettle made of resistant materials that 
-                            you see in the image, for a special price.
+                    <div class="blog__data">
+                        <h4 class="blog__title"> 
+                            Bean to Cup Machines
+                        </h4>
+                        <p class="blog__description">
+                            This includes comparisons of features, but also my own thoughts on each machine based on my knowledge of bean to cup coffee machines...
                         </p>
-                        <div class="quality__buttons">
-                            <button class="button">buy now</button>
-                            <a href="" class="quality__button">
-                                see more <img src="/app/images/arrow-right.svg" alt="arrow right" width="20px" height="20px">
-                            </a>
+                        <div class="blog__footer">
+                            <div class="blog__reaction">
+                                <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
+                                <span>12</span>
+                            </div>
+                            <div class="blog__reaction">
+                                <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
+                                <span>6.5K</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
+                <!--  -->
+                <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="/app/images/blog2.jpg" alt="" class="blog__img">
+                        <a href="#" class="blog__button">
+                            <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
+                        </a>
+                    </div>
+                    <div class="blog__data">
+                        <h4 class="blog__title">
+                            The 8 Best Milk Frothers!
+                        </h4>
+                        <p class="blog__description">
+                            So you're looking for the best milk frother, eh? Well I've got good news for you, because this post is all about the best milk frothers...
+                        </p>
+                        <div class="blog__footer">
+                            <div class="blog__reaction">
+                                <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
+                                <span>12</span>
+                            </div>
+                            <div class="blog__reaction">
+                                <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
+                                <span>6.5K</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--  -->
+                <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="/app/images/blog3.jpg" alt="" class="blog__img">
+                        <a href="#" class="blog__button">
+                            <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
+                        </a>
+                    </div>
+                    <div class="blog__data">
+                        <h4 class="blog__title">
+                            Sage Barista Pro Review
+                        </h4>
+                        <p class="blog__description">
+                            I'll be aiming to answer the question “is the Sage barista Pro worth it?” – or more specifically, is the barista pro worth throwing...
+                        </p>
+                        <div class="blog__footer">
+                            <div class="blog__reaction">
+                                <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
+                                <span>12</span>
+                            </div>
+                            <div class="blog__reaction">
+                                <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
+                                <span>6.5K</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </section>
-        
-        <!-- LOGOS -->
-        <section class="logos section">
-            <div class="logos__container container grid">
-                <img src="/app/images/logocoffee1.png" alt="logos" class="logo__img">
-                <img src="/app/images/logocoffee2.png" alt="logos" class="logo__img">
-                <img src="/app/images/logocoffee3.png" alt="logos" class="logo__img">
-                <img src="/app/images/logocoffee4.png" alt="logos" class="logo__img">
-                <img src="/app/images/logocoffee5.png" alt="logos" class="logo__img">
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="testimonials section">
-            <div class="testimonials__container container">
-                <h2 class="section__title">Testimonials</h2>
-                <div class="testimonials__content grid">
-                    <div class="slide__container active-slide">
-                        <div class="slide">
-                            <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="40px" height="40px">
-                            <div class="user">
-                                <img src="/app/images/person1.jpg" alt="" class="user__img">
-                                <div class="user__info">
-                                    <h3>john doe</h3>
-                                    <div class="user__stars">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="user__description">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing 
-                                elit. Incidunt, reprehenderit maiores! Asperiores, 
-                                quaerat."
-                            </p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="slide__container">
-                        <div class="slide">
-                            <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="40px" height="40px">
-                            <div class="user">
-                                <img src="/app/images/person2.jpg" alt="" class="user__img">
-                                <div class="user__info">
-                                    <h3>john doe</h3>
-                                    <div class="user__stars">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="user__description">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing 
-                                elit. Incidunt, reprehenderit maiores! Asperiores, 
-                                quaerat."
-                            </p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="slide__container">
-                        <div class="slide">
-                            <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="40px" height="40px">
-                            <div class="user">
-                                <img src="/app/images/person3.jpg" alt="" class="user__img">
-                                <div class="user__info">
-                                    <h3>john doe</h3>
-                                    <div class="user__stars">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="user__description">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing 
-                                elit. Incidunt, reprehenderit maiores! Asperiores, 
-                                quaerat."
-                            </p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="slide__container">
-                        <div class="slide">
-                            <img src="/app/images/double-quotes.svg" alt="" class="slide__quote" width="40px" height="40px">
-                            <div class="user">
-                                <img src="/app/images/person4.jpg" alt="" class="user__img">
-                                <div class="user__info">
-                                    <h3>john doe</h3>
-                                    <div class="user__stars">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                        <img src="/app/images/star-icon.svg" alt="" class="star" width="20px" height="20px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="user__description">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing 
-                                elit. Incidunt, reprehenderit maiores! Asperiores, 
-                                quaerat."
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <button class="prev__slide">
-                <img src="/app/images/left-arrow.svg" alt="" width="40px" height="40px">
-            </button>
-            <button class="next__slide">
-                <img src="/app/images/right-arrow.svg" alt="" width="40px" height="40px">
-            </button>
-        </section>
-
-        <!-- BLOG -->
-        <section class="section blog section" id="blog">
-            <div class="blog__container container">
-                <h2 class="section__title">
-                    Welcome to our coffee blog!
-                </h2>
-                <div class="blog__content grid">
-                    <article class="blog__card">
-                        <div class="blog__image">
-                            <img src="/app/images/blog1.jpg" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
-                            </a>
-                        </div>
-                        <div class="blog__data">
-                            <h3 class="blog__title"> 
-                                Bean to Cup Machines
-                            </h3>
-                            <p class="blog__description">
-                                This includes comparisons of features, but also my own thoughts on each machine based on my knowledge of bean to cup coffee machines...
-                            </p>
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
-                                    <span>12</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
-                                    <span>6.5K</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="blog__card">
-                        <div class="blog__image">
-                            <img src="/app/images/blog2.jpg" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
-                            </a>
-                        </div>
-                        <div class="blog__data">
-                            <h3 class="blog__title">
-                                The 8 Best Milk Frothers!
-                            </h3>
-                            <p class="blog__description">
-                                So you're looking for the best milk frother, eh? Well I've got good news for you, because this post is all about the best milk frothers...
-                            </p>
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
-                                    <span>12</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
-                                    <span>6.5K</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="blog__card">
-                        <div class="blog__image">
-                            <img src="/app/images/blog3.jpg" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <img src="/app/images/arrow-right-white.svg" alt="arrow icon" width="20px" height="20px">
-                            </a>
-                        </div>
-                        <div class="blog__data">
-                            <h3 class="blog__title">
-                                Sage Barista Pro. Detailed Review
-                            </h3>
-                            <p class="blog__description">
-                                I'll be aiming to answer the question “is the Sage barista Pro worth it?” – or more specifically, is the barista pro worth throwing...
-                            </p>
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <img src="/app/images/comment-icon.svg" alt="" width="30px" height="30px">
-                                    <span>12</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <img src="/app/images/show-icon.svg" alt="" width="30px" height="30px">
-                                    <span>6.5K</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__container container">
-            <h2 class="footer__title">coffee</h2>
+            <h3 class="footer__title">coffee</h3>
             <div class="footer__content grid">
                 <div class="footer__data">
                     <p class="footer__description">
@@ -557,24 +552,24 @@
                     </form>
                 </div>
                 <div class="footer__data">
-                    <h3 class="footer__subtitle">address</h3>
+                    <h4 class="footer__subtitle">office</h4>
+                    <p class="footer__info">
+                        monday - saturday <br>
+                        9AM - 10PM
+                    </p>
+                </div>
+                <div class="footer__data">
+                    <h4 class="footer__subtitle">address</h4>
                     <p class="footer__info">
                         45678 Europe <br>
                         Novi Sad 12345
                     </p>
                 </div>
                 <div class="footer__data">
-                    <h3 class="footer__subtitle">contact</h3>
+                    <h4 class="footer__subtitle">contact</h4>
                     <p class="footer__info">
                         +12345678 <br>
                         coffee@email.com 
-                    </p>
-                </div>
-                <div class="footer__data">
-                    <h3 class="footer__subtitle">office</h3>
-                    <p class="footer__info">
-                        monday - saturday <br>
-                        9AM - 10PM
                     </p>
                 </div>
             </div>

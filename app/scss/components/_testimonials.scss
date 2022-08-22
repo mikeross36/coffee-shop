@@ -1,12 +1,11 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .testimonials {
     position: relative;
 
     @include mixins.breakpoint-up(large) {
-        padding-bottom: 9rem;
-        // height: 100%;
+        padding-bottom: 5rem;
     }
 
     &__container {
@@ -23,10 +22,6 @@
                 padding-bottom: 4rem;
             }
 
-            @include mixins.breakpoint-up(large){
-                padding: 4rem;
-            }
-    
             .slide__container {
                 display: none;
                 padding-bottom: 2rem;
@@ -37,7 +32,7 @@
     
                 .slide {
                     border-radius: .5rem;
-                    background-color: $container-color;
+                    background-color: $white-color;
                     box-shadow: $shadowOne;
                     max-width: 30rem;
                     max-height: 20rem;
@@ -50,9 +45,9 @@
                         animation: slideScale .2s linear .4s backwards;
                     }
     
-                    @include mixins.breakpoint-up(large) {
-                        max-height: 25rem;
-                        padding: 1rem 2rem;
+                    @include mixins.breakpoint-up(small) {
+                        // height: 25rem;
+                        padding: 2rem;
                     }
         
                     @keyframes slideScale {
@@ -64,15 +59,16 @@
     
                     .slide__quote {
                         position: absolute;
-                        top: 1rem;
-                        right: 1rem;
+                        top: 40%;
+                        right: 10%;
                         z-index: $z-tooltip;
                     }
     
                     .user {
                         padding-top: 1rem;
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
+                        column-gap: .3rem;
     
                         .user__img {
                             width: 6.25rem;
@@ -83,9 +79,10 @@
     
                         .user__info {
                             
-                            & h3 {
+                            & h4 {
                                 color: $text-color;
                                 text-transform: capitalize;
+                                margin-bottom: $mb-1;
                             }
                             
                             .user__stars {
@@ -94,14 +91,19 @@
                                 column-gap: .1rem;
                             }
                         }
-    
-                        .user__description {
-                            margin: 1rem 0;
-                            color: $text-color;
-                            font-size: $small-font-size;
-                            padding: 1rem 0;
-                            max-width: 60%;
-                            line-height: 150%;
+                    }
+
+                    .user__description {
+                        color: $text-color;
+                        font-size: $fontSm;
+                        font-style: italic;
+                        padding: .5rem 0;
+                        line-height: 150%;
+                        width: 90%;
+
+                        @include mixins.breakpoint-up(small) {
+                            font-size: $fontMd;
+                            line-height: 170%;
                         }
                     }
                 }
@@ -118,7 +120,7 @@
     .prev__slide,
     .next__slide {
         position: absolute;
-        bottom: 5%;
+        bottom: 10%;
         height: 3.125rem;
         width: 3.125rem;
         background: transparent;
@@ -134,7 +136,7 @@
         left: 30%;
 
         @include mixins.breakpoint-up(large) {
-            left: 20%;
+            left: 15%;
         }
     }
 
@@ -142,7 +144,7 @@
         right: 30%;
 
         @include mixins.breakpoint-up(large) {
-            right: 20%;
+            right: 15%;
         }
     }
 }

@@ -1,8 +1,8 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .logos {
-    background-color: $container-color;
+    background-color: $white-color;
 
     &__container {
         grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));

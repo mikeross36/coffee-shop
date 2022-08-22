@@ -1,8 +1,8 @@
-@use "../mixins";
 @use "../variables" as *;
+@use "../mixins";
 
 .blog {
-    background-color: $container-color;
+    background-color: $white-color;
 }
 
 .blog__container {
@@ -13,19 +13,22 @@
     }
 
     .blog__content {
+        justify-items: center;
         row-gap: 3rem;
 
         @include mixins.breakpoint-up(small){
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            // grid-template-columns: 1fr;
+           
             column-gap: 3rem;
         }
 
         @include mixins.breakpoint-up(medium){
-            grid-template-columns: repeat(2, 1fr);
+            // grid-template-columns: repeat(2, 1fr);
         }
 
         @include mixins.breakpoint-up(large){
-            grid-template-columns: repeat(3, 1fr);
+            // grid-template-columns: repeat(3, 1fr);
             padding-top: 2rem;
         }
 
@@ -49,8 +52,8 @@
                     right: 0;
                     bottom: 0;
                     display: inline-flex;
-                    background-color: #243B55;
-                    padding: 1rem;
+                    background-color: $btn-color;
+                    padding: .5rem;
                     border-radius: .5rem 0 .5rem 0;
 
                     & img {

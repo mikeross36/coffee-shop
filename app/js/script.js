@@ -1,19 +1,4 @@
-function openMobMenu() {
-    const navMenu = document.getElementById("nav-menu")
-    const menuBtn = document.getElementById("menu-btn")
-    const navClose = document.getElementById("nav-close")
-    const navLinks = document.querySelectorAll(".nav__link")
-
-    if (menuBtn) menuBtn.addEventListener("click", () => navMenu.classList.add("show-menu"))
-
-    if (navClose) navClose.addEventListener("click", () => navMenu.classList.remove("show-menu"))
-    
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("show-menu")
-        })
-    })
-};
+"use strict"
 
 function scrollHeader() {
     const header = document.getElementById("header")
@@ -25,29 +10,6 @@ function scrollHeader() {
         header.classList.remove("scroll-header")
     }
 };
-
-// products tabs changing
-const productsLinks = document.querySelectorAll(".products__item")
-
-function changeProducts(e) {
-    const linkTarget = e.currentTarget;
-    const product = linkTarget.dataset.product;
-    const productsContents = document.querySelectorAll(".products__content")
-
-    productsContents.forEach(content => {
-        content.classList.remove("active-content")
-    })
-    productsLinks.forEach(link => {
-        link.classList.remove("active-link")
-    })
-
-    document.querySelector(`#${product}`).classList.add("active-content")
-    linkTarget.classList.add("active-link")
-}
-
-productsLinks.forEach(link => {
-    link.addEventListener("click", changeProducts)
-});
 
 function setupSlides() {
     const slides = [...document.querySelectorAll(".slide__container")]
@@ -72,7 +34,6 @@ function setupSlides() {
 };
 
 (function () {
-    openMobMenu()
     window.addEventListener("scroll", scrollHeader);
     setupSlides()
 })()

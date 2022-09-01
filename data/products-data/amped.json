@@ -1,0 +1,30 @@
+[
+    {
+        "id": "21776623-e6a2-4ee5-a2f5-5641aca0a781",
+        "image": "./app/images/coffee8.png",
+        "price": "4.99€",
+        "name": "white russian",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "dbf0b471-8cbc-4180-b2a1-05c962bf2edb",
+        "image": "./app/images/coffee9.png",
+        "price": "4.99€",
+        "name": "campfire",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "d3f54268-38f9-4953-a0f4-c86b484a24e2",
+        "image": "./app/images/coffee10.png",
+        "price": "4.99€",
+        "name": "charger",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "90498cd8-87c3-4ce9-ad82-914feb75718e",
+        "image": "./app/images/coffee11.png",
+        "price": "4.99€",
+        "name": "coco loco",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "7a6c0925-3108-4da6-85dc-245c339e57de",
+        "link" : "#banner",
+        "text": "home"
+    },
+    {
+        "id": "f062aaea-3c16-46fa-a636-d727f3ce929b",
+        "link" : "#products",
+        "text": "products"
+    },
+    {
+        "id": "7551c5bb-a463-4e81-aa34-41c050aa39f0",
+        "link" : "#premium",
+        "text": "premium"
+    },
+    {
+        "id": "94329792-1e6d-46d9-9327-e4443b95f67a",
+        "link" : "#blog",
+        "text": "blog"
+    }
+]

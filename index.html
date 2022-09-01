@@ -18,18 +18,7 @@
             </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#banner" class="nav__link active-link">home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#products" class="nav__link">products</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#premium" class="nav__link">premium</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#blog" class="nav__link">blog</a>
-                    </li>
+                    <!-- NAV ITEMS & NAV LINKS -->
                 </ul>
                 <div class="nav__close" id="nav-close">
                     <img src="/app/images/close-btn.svg" alt="close btn" width="35px" height="35px">
@@ -87,29 +76,7 @@
             </div>
             <!--  -->
             <div class="speciality__category">
-                <div class="speciality__group speciality__line">
-                    <img src="/app/images/speciality1.svg" alt="" class="speciality__img" width="20px" height="20px">
-                    <h3 class="speciality__title">selected coffee</h3>
-                    <p class="speciality__description">
-                        We select the best premium coffee for a true taste
-                    </p>
-                </div>
-                <!--  -->
-                <div class="speciality__group speciality__line">
-                    <img src="/app/images/speciality2.svg" alt="" class="speciality__img" width="20px" height="20px">
-                    <h3 class="speciality__title">own barista</h3>
-                    <p class="speciality__description">
-                        Act all fancy like you know something
-                    </p>
-                </div>
-                <!--  -->
-                <div class="speciality__group">
-                    <img src="/app/images/speciality3.svg" alt="" class="speciality__img" width="20px" height="20px">
-                    <h3 class="speciality__title">enjoy at home</h3>
-                    <p class="speciality__description">
-                        Enjoy the best coffee in the comfort of your home
-                    </p>
-                </div>
+                <!-- SPECIALITY GROUPS -->
             </div>
         </div>
     </section>
@@ -119,173 +86,35 @@
         <div class="products__container container">
             <h2 class="section__title">Choose our delicious & best products</h2>
             <ul class="products__filters">
-                <li class="products__item products__line active-link" data-product="delicacies">
+                <li class="products__item products__line active-link" data-product="lattes">
                     <h4 class="products__title">lattes</h4>
                     <span class="products__stock">3 products</span>
                 </li>
-                <li class="products__item products__line" data-product="coffee">
+                <li class="products__item products__line" data-product="mochas">
                     <h4 class="products__title">mochas</h4>
                     <span class="products__stock">4 products</span>
                 </li>
-                <li class="products__item products__line" data-product="cake">
+                <li class="products__item products__line" data-product="amped">
                     <h4 class="products__title">amped</h4>
                     <span class="products__stock">4 products</span>
                 </li>
             </ul>
-            <!-- delicacies -->
-            <div class="products__content grid active-content" id="delicacies">
+            <!-- lattes -->
+            <div class="products__content grid active-content" id="lattes">
                 <div class="products__wrapper">
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee1.png" alt="delicacy product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">irish dream</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee2.png" alt="delicacy product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">aloha</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee3.png" alt="delicacy product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">avalanche</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="20px" height="20px">
-                            </button>
-                        </div>
-                    </article>
+                    <!-- LATTERS -->
                 </div>
             </div>
-            <!-- coffee -->
-            <div class="products__content grid" id="coffee">
+            <!-- mochas -->
+            <div class="products__content grid" id="mochas">
                 <div class="products__wrapper">
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee4.png" alt="coffee product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">muscle mocha</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee5.png" alt="coffee product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">trifecta</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee6.png" alt="coffee product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">cloud 9</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee7.png" alt="coffee product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">dream bar</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
+                    <!-- MOCHAS -->
                 </div>
             </div>
-
-            <!-- cake -->
-            <div class="products__content grid" id="cake">
+            <!-- amped -->
+            <div class="products__content grid" id="amped">
                 <div class="products__wrapper">
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee8.png" alt="cake product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">white russian</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee9.png" alt="cake product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">campfire</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee10.png" alt="cake product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">charger</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
-                    <!--  -->
-                    <article class="products__card">
-                        <div class="products__shape">
-                            <img src="/app/images/coffee11.png" alt="cake product" class="products__img">
-                        </div>
-                        <div class="products__data">
-                            <span class="products__price">4.99€</span>
-                            <span class="products__name">coco loco</span>
-                            <button class="button products__button">
-                                <img src="/app/images/shopping-cart.svg" alt="shopping cart" width="30px" height="30px">
-                            </button>
-                        </div>
-                    </article>
+                    <!-- AMPED -->
                 </div>
             </div>
         </div>

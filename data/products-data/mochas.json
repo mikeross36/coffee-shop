@@ -1,0 +1,30 @@
+[
+    {
+        "id": "27acd754-502b-41cb-bb56-49b8d2c7e95f",
+        "image": "./app/images/coffee4.png",
+        "price": "4.99€",
+        "name": "muscle mocha",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "d7a4f0fe-5f21-4960-a78b-11c2ad459d86",
+        "image": "./app/images/coffee5.png",
+        "price": "4.99€",
+        "name": "muscle mocha",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "25fdac39-c504-4b28-8b10-dbdeb74b75d8",
+        "image": "./app/images/coffee6.png",
+        "price": "4.99€",
+        "name": "muscle mocha",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "adffad16-f241-4ab2-81ae-48e32e59b8c5",
+        "image": "./app/images/coffee7.png",
+        "price": "4.99€",
+        "name": "muscle mocha",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    }
+]

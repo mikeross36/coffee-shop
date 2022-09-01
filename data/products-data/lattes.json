@@ -1,0 +1,23 @@
+[
+    {
+        "id": "2f27beed-9ba6-4b22-97fb-07f625e8f1cc",
+        "image": "./app/images/coffee1.png",
+        "price": "4.99€",
+        "name": "irish dream",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "acb14eab-d9c8-413e-a729-3f9a0ea593a3",
+        "image": "./app/images/coffee2.png",
+        "price": "4.99€",
+        "name": "aloha",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    },
+    {
+        "id": "30bc7e8a-2820-476a-a0b5-0bb4e24370e0",
+        "image": "./app/images/coffee3.png",
+        "price": "4.99€",
+        "name": "avalanche",
+        "cartIcon": "./app/images/shopping-cart.svg"
+    }
+]

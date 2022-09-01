@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "48819387-80c4-4333-b98d-88fc98529b11",
+        "image" : "./app/images/speciality1.svg",
+        "title" : "selected coffee",
+        "description" : "We select the best premium coffee for a true taste"
+    },
+    {
+        "id" : "cc555dd8-6682-4a5a-b68c-d5893faa0c1e",
+        "image" : "./app/images/speciality2.svg",
+        "title" : "own barista",
+        "description" : " Act all fancy like you know something"
+    },
+    {
+        "id" : "184148eb-ccb2-47c7-aa11-193e100f2fa3",
+        "image" : "./app/images/speciality3.svg",
+        "title" : "enjoy at home",
+        "description" : "Enjoy the best coffee in the comfort of your home"
+    }
+]

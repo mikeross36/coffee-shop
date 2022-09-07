@@ -1,0 +1,34 @@
+[
+    {
+        "id": "ebb4f94b-c137-4739-8ac1-55aa2c3dac42",
+        "quoteIcon": "./app/images/double-quotes.svg",
+        "image": "./app/images/person1.jpg",
+        "name": "jane doe",
+        "starIcon": "./app/images/star-icon.svg",
+        "description": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, reprehenderit maiores! Asperiores, quaerat.'"
+    },
+    {
+        "id": "fb0e324f-b615-4475-8814-6f5bc158f584",
+        "quoteIcon": "./app/images/double-quotes.svg",
+        "image": "./app/images/person2.jpg",
+        "name": "jane doe",
+        "starIcon": "./app/images/star-icon.svg",
+        "description": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, reprehenderit maiores! Asperiores, quaerat.'"
+    },
+    {
+        "id": "579ffe8c-01de-446d-86d2-17eb3053dc6d",
+        "quoteIcon": "./app/images/double-quotes.svg",
+        "image": "./app/images/person3.jpg",
+        "name": "jane doe",
+        "starIcon": "./app/images/star-icon.svg",
+        "description": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, reprehenderit maiores! Asperiores, quaerat.'"
+    },
+    {
+        "id": "4ff69cbf-66f3-4ffe-864d-546b226a8c4a",
+        "quoteIcon": "./app/images/double-quotes.svg",
+        "image": "./app/images/person4.jpg",
+        "name": "jane doe",
+        "starIcon": "./app/images/star-icon.svg",
+        "description": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, reprehenderit maiores! Asperiores, quaerat.'"
+    }
+]

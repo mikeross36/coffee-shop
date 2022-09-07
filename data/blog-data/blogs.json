@@ -1,0 +1,35 @@
+[
+    {
+        "id": "93f4f673-57f6-4225-b51f-7aa6200d205a",
+        "image": "./app/images/blog1.jpg",
+        "btnIcon": "./app/images/arrow-right-white.svg",
+        "title": "Bean to Cup Machines",
+        "description": "This includes comparisons of features, but also my own thoughts on each machine based on my knowledge of bean to cup coffee machines...",
+        "commentIcon": "./app/images/comment-icon.svg",
+        "commentNum": "12",
+        "showIcon": "./app/images/show-icon.svg",
+        "showNum": "6.5"
+    },
+    {
+        "id": "b7661457-0f4a-4c32-aff4-d023c8afe343",
+        "image": "./app/images/blog2.jpg",
+        "btnIcon": "./app/images/arrow-right-white.svg",
+        "title": "The 8 Best Milk Frothers!",
+        "description": "So you're looking for the best milk frother, eh? Well I've got good news for you, because this post is all about the best milk frothers...",
+        "commentIcon": "./app/images/comment-icon.svg",
+        "commentNum": "12",
+        "showIcon": "./app/images/show-icon.svg",
+        "showNum": "6.5"
+    },
+    {
+        "id": "125df182-796b-478f-8cc4-7b57f4ddb9b1",
+        "image": "./app/images/blog3.jpg",
+        "btnIcon": "./app/images/arrow-right-white.svg",
+        "title": "Sage Barista Pro Review",
+        "description": "I'll be aiming to answer the question “is the Sage barista Pro worth it?”  Or more specifically, is the barista pro worth throwing...",
+        "commentIcon": "./app/images/comment-icon.svg",
+        "commentNum": "12",
+        "showIcon": "./app/images/show-icon.svg",
+        "showNum": "6.5"
+    }
+]

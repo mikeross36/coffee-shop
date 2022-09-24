@@ -36,18 +36,13 @@
                     box-shadow: $shadowOne;
                     max-width: 30rem;
                     max-height: 20rem;
-                    padding: 1rem;
+                    padding: 2rem 9%;
                     position: relative;
                     transform-style: preserve-3d;
                     animation: slideRotate .4s linear;
     
                     & > * {
                         animation: slideScale .2s linear .4s backwards;
-                    }
-    
-                    @include mixins.breakpoint-up(small) {
-                        // height: 25rem;
-                        padding: 2rem;
                     }
         
                     @keyframes slideScale {
@@ -59,7 +54,7 @@
     
                     .slide__quote {
                         position: absolute;
-                        top: 40%;
+                        top: 50%;
                         right: 10%;
                         z-index: $z-tooltip;
                     }

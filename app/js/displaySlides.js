@@ -1,14 +1,13 @@
 "use strict"
 
 const globals = () => {
-    const containers = document.querySelectorAll(".slide__container")
-    const slides = [...document.querySelectorAll(".slide__container")]
+    const containers = [...document.querySelectorAll(".slide__container")]
     const prevBtn = document.querySelector(".prev__slide")
     const nextBtn = document.querySelector(".next__slide")
     let currSlide = 0;
-    return {containers, slides, prevBtn, nextBtn, currSlide}
+    return {containers, prevBtn, nextBtn, currSlide}
 };
-let {containers, slides, prevBtn, nextBtn, currSlide} = globals()
+let {containers, prevBtn, nextBtn, currSlide} = globals()
 
 class Testimonials {
     getSlides = async () => {
@@ -62,17 +61,17 @@ class Testimonials {
     setupSlides = () => {
         if (nextBtn) {
             nextBtn.onclick = () => {
-                this.removeActive(slides, currSlide)
-                currSlide = (currSlide + 1) % slides.length
-                this.addActive(slides, currSlide)
+                this.removeActive(containers, currSlide)
+                currSlide = (currSlide + 1) % containers.length
+                this.addActive(containers, currSlide)
             }
         }
 
         if (prevBtn) {
             prevBtn.onclick = () => {
-                this.removeActive(slides, currSlide)
-                currSlide = (currSlide - 1 + slides.length) % slides.length
-                this.addActive(slides, currSlide)
+                this.removeActive(containers, currSlide)
+                currSlide = (currSlide - 1 + containers.length) % containers.length
+                this.addActive(containers, currSlide)
             }
         }
     }
